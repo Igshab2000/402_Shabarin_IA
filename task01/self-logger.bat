@@ -1,6 +1,8 @@
 @echo off
-setlocal enabledelayedexpansion
 chcp 65001>nul
+
+where sqlite3>nul 2>nul
+if %ERRORLEVEL% NEQ 0 ( echo Команда sqlite3 не найдена & pause & exit )
 
 echo.
 echo create table if not exists logs(User varchar(10), Date text default current_timestamp); | sqlite3 logs.db
