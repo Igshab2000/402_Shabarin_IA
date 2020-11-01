@@ -1,0 +1,22 @@
+{
+    "name": "igors/minesweeper",
+    "authors": [
+        {
+            "name": "Igor Shabarin",
+            "email": "igorshabarin2000@mail.ru"
+        }
+    ],
+    "require": {
+        "wp-cli/php-cli-tools": "^0.11.11"
+    },
+    "bin": [
+        "bin/minesweeper"
+    ],
+    "autoload": {
+        "files": [
+            "src/Controller.php",
+            "src/Model.php",
+            "src/View.php"
+        ]
+    }
+}
