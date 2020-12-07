@@ -1,0 +1,113 @@
+body {
+    color: #DDDDDD;
+    font-family: courier new;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #807777;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 14pt;
+    font-weight: normal;
+  }
+  #grid {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+  }
+  
+  #grid TR TD{
+    border:1px solid white;
+    background: #999999;
+    width: 16px;
+    height: 16px;
+    text-align: center;
+  }
+  
+  #grid TR TD.clicked {
+      background: #333333;
+  }
+  
+  #grid TR TD.mine {
+      background: #FF0000;
+  }
+  
+  #reset #showResults {
+    width: 100px;
+    font-size: 19px;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+
+  TD {
+    cursor: pointer;
+  }
+
+  .init-form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+  }
+
+  .button-start {
+    width: 200px;
+    background-color:  azure;
+    font-size: 18px;
+    border-radius: 15px;
+    align-self: center;
+    outline: none;
+  }
+
+  .input-field {
+    width: 100%;
+  }
+
+  .input-field input {
+    width: 150px;
+    border-radius: 15px;
+    background-color: azure;
+    outline: none;
+    padding-left: 5px;
+    font-size: 14px;
+  }
+
+  .input-field {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  .show-error {
+    display: none;
+    align-self: center;
+    color: rgb(128, 12, 12);
+    border-radius: 15px;
+    font-size: 18px;
+    border: 1px solid  #DDDDDD;
+    margin-top: 20px;
+  }
+
+  #game {
+    display: none;
+  }
+
+  #grid TR TD.flag {
+    background: #73f74b;
+    color: black;
+  }
+
+  #result {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 20px;
+  }
+
+  #result div {
+    display: flex;
+    flex-direction: column;
+    margin-left: 25px;
+  }
