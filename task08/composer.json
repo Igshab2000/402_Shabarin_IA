@@ -1,0 +1,14 @@
+{
+    "name": "igors/minesweeper",
+    "authors": [
+        {
+            "name": "Igor Shabarin",
+            "email": "igorshabarin2000@mail.ru"
+        }
+    ],
+    "require": {
+        "slim/slim": "^4.7",
+        "slim/psr7": "^1.3",
+        "slim/http": "^1.2"
+    }
+}
