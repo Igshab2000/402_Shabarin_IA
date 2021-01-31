@@ -3,66 +3,66 @@
 
     class Vector {
 
-        private  $xCord;
-        private  $yCord;
-        private  $zCord;
+        private  $xCoordinate;
+        private  $yCoordinate;
+        private  $zCoordinate;
 
-        public function __construct(int $xCord, int $yCord, int $zCord) {
+        public function __construct(int $xCoordinate, int $yCoordinate, int $zCoordinate) {
 
-            if($xCord == 0 &&  $yCord == 0 && $zCord == 0) {
+            if($xCoordinate == 0 &&  $yCoordinate == 0 && $zCoordinate == 0) {
                 echo "Одна из координат должна быть ненулевой";
                 exit();
             }
 
-            $this->xCord = $xCord;
-            $this->yCord = $yCord;
-            $this->zCord = $zCord;
+            $this->xCoordinate = $xCoordinate;
+            $this->yCoordinate = $yCoordinate;
+            $this->zCoordinate = $zCoordinate;
         }
 
         public function add(Vector $vector): Vector {
-            $xCord = $this->xCord + $vector->xCord;
-            $yCord = $this->yCord + $vector->yCord;
-            $zCord = $this->zCord + $vector->zCord;
+            $xCoordinate = $this->xCoordinate + $vector->xCoordinate;
+            $yCoordinate = $this->yCoordinate + $vector->yCoordinate;
+            $zCoordinate = $this->zCoordinate + $vector->zCoordinate;
 
-            return new Vector($xCord, $yCord, $zCord);
+            return new Vector($xCoordinate, $yCoordinate, $zCoordinate);
         }
 
         public function sub(Vector $vector): Vector {
-            $xCord = $this->xCord - $vector->xCord;
-            $yCord = $this->yCord - $vector->yCord;
-            $zCord = $this->zCord - $vector->zCord;
+            $xCoordinate = $this->xCoordinate - $vector->xCoordinate;
+            $yCoordinate = $this->yCoordinate - $vector->yCoordinate;
+            $zCoordinate = $this->zCoordinate - $vector->zCoordinate;
 
-            return new Vector($xCord, $yCord, $zCord);
+            return new Vector($xCoordinate, $yCoordinate, $zCoordinate);
         }
 
         public function product($number): Vector {
-            $xCord = $this->xCord * $number;
-            $yCord = $this->yCord * $number;
-            $zCord = $this->zCord * $number;
+            $xCoordinate = $this->xCoordinate * $number;
+            $yCoordinate = $this->yCoordinate * $number;
+            $zCoordinate = $this->zCoordinate * $number;
 
-            return new Vector($xCord, $yCord, $zCord);
+            return new Vector($xCoordinate, $yCoordinate, $zCoordinate);
         }
         
         public function scalarProduct(Vector $vector): int {
-            $xCord = $this->xCord * $vector->xCord;
-            $yCord = $this->yCord * $vector->yCord;
-            $zCord = $this->zCord * $vector->zCord;
+            $xCoordinate = $this->xCoordinate * $vector->xCoordinate;
+            $yCoordinate = $this->yCoordinate * $vector->yCoordinate;
+            $zCoordinate = $this->zCoordinate * $vector->zCoordinate;
 
-            $sumCord = $xCord + $yCord + $zCord;
+            $sumCord = $xCoordinate + $yCoordinate + $zCoordinate;
             return $sumCord;
         }
 
         public function vectorProduct(Vector $vector): Vector {
-            $xCord = $this->yCord * $vector->zCord - $this->zCord * $vector->yCord;
-            $yCord = $this->zCord * $vector->xCord - $this->xCord * $vector->zCord;
-            $zCord = $this->xCord * $vector->yCord - $this->yCord * $vector->xCord;
+            $xCoordinate = $this->yCoordinate * $vector->zCoordinate - $this->zCoordinate * $vector->yCoordinate;
+            $yCoordinate = $this->zCoordinate * $vector->xCoordinate - $this->xCoordinate * $vector->zCoordinate;
+            $zCoordinate = $this->xCoordinate * $vector->yCoordinate - $this->yCoordinate * $vector->xCoordinate;
 
-            return new Vector($xCord, $yCord, $zCord);
+            return new Vector($xCoordinate, $yCoordinate, $zCoordinate);
         }
 
         public function __toString(): string {
 
-            return "(".$this->xCord.";".$this->yCord.";".$this->zCord.")";
+            return "(".$this->xCoordinate.";".$this->yCoordinate.";".$this->zCoordinate.")";
         }
         
     }
