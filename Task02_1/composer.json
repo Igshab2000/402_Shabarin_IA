@@ -1,0 +1,20 @@
+{
+    "name": "igors/task02_1",
+    "authors": [
+        {
+            "name": "Igor Shabarin",
+            "email": "igorshabarin2000@mail.ru"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "require": {
+        "phpunit/phpunit": "^6.5"
+    },
+    "bin": [
+        "bin/run-test"
+    ]
+}
