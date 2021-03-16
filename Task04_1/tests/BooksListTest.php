@@ -73,6 +73,10 @@ class BooksListTest extends TestCase
         return $booksList;
     }
 
+    /**
+     * @depends testCurrentAndKey
+     */
+
     public function testNext(BooksList $booksList)
     {
         $booksList->next();
@@ -99,6 +103,10 @@ class BooksListTest extends TestCase
 
         return $booksList;
     }
+
+    /**
+     * @depends testNext
+     */
 
     public function testValidAndRewind(BooksList $booksList)
     {
